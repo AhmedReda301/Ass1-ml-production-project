@@ -48,7 +48,9 @@ def predict(pipeline: Pipeline, features: object) -> list[str]:
     expected = pipeline.n_features_in_
     if x.ndim != 2 or x.shape[1] != expected:
         logger.error("Invalid input shape %s, expected %d features", x.shape, expected)
-        raise ValueError(f"Expected {expected} features per sample, got shape {x.shape}")
+        raise ValueError(
+            f"Expected {expected} features per sample, got shape {x.shape}"
+        )
 
     if np.isnan(x).any():
         logger.error("Prediction input contains NaN values")

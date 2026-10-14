@@ -49,4 +49,3 @@ def split_data(
     )
     logger.info("Split done: train=%s, test=%s", x_train.shape, x_test.shape)
     return x_train, x_test, y_train, y_test
-
