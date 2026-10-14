@@ -19,7 +19,7 @@ def load_dataset() -> Bunch:
         data.data.shape[0],
         data.data.shape[1],
     )
-    logger.info("Target names: %s", list(data.target_names))
+    logger.info("Target names: %s", data.target_names.tolist())
     logger.info("Class distribution: %s", np.bincount(data.target).tolist())
 
     missing = int(np.isnan(data.data).sum())
