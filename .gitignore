@@ -16,6 +16,10 @@ __pycache__/
 # Notebooks
 .ipynb_checkpoints/
 
+# Trained model artifacts (recreated by running training)
+models/*.joblib
+!models/.gitkeep
+
 # OS / editor
 .DS_Store
 Thumbs.db
